@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+	    <meta name="description" content="テストで使えるdevToolを紹介します！">
+        <title>タイトル</title>
+        
+        <!--CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--header-->
+        <header>
+            <p>devTool</p>
+        </header>
+        
+        <!--tab menu-->
+        <div class="tabs">
+            <ul class="tabs-menu">
+                <li><a href="#tabs-1">devToolについて</a></li>
+                <li><a href="#tabs-2">devToolの開き方</a></li>
+                <li><a href="#tabs-3">devToolの見方</a></li>
+                <li><a href="#tabs-4">検証でよく使う項目</a></li>
+                <li><a href="#tabs-6">コンソールを使う</a></li>
+            </ul>
+
+        <!--tab content-->
+            <section class="tabs-content">
+                
+                <section id="tabs-1">
+                    <h4>devToolについて</h4>
+
+                        <p class="ex">
+                            devToolとはWebページなどを作成する際に、その構造（HTMLやCSSなど）がどのようになっているか確認できるツールのことです。
+                            検証ツールや開発ツールとも呼ばれています。
+                        </p>
+                        <p class="ex"> 
+                            Google ChromeやSafariなどのブラウザにも搭載されており、ブラウザで表示しているページのHTMLや適用されているスタイルを確認したり、
+                            自分の環境下でのみ変更したりすることが出来ます。
+                        </p>
+                        <p class="ex">  
+                            テスト検証の際にも、使用すると便利な事が多いため是非使って見ましょう。<br>   
+                            ここではdevツールの導入方法とテスト検証の際に使用できる便利な機能を紹介します。
+                        </p>
+                        
+                        <div class="background-white-box">
+                            <h5>devToolでできること</h5>
+
+                                <ul class="ex-list">
+                                    <li>&bull;	いろいろな端末サイズでどう見えるか分かる</li>
+                                    <li>&bull;	リンク先や画像のソースが分かる</li>
+                                    <li>&bull;  レイアウト崩れが分かる</li>
+                                    <li>&bull;	テキストボックスに文字を入れることができる</li>
+                                    <li>&bull;	HTML/CSSが読めるようになる</li>
+                                </ul>
+                        </div>
+                </section>
+
+                <section id="tabs-2">
+                    <h4>devToolの開き方</h4>
+
+                    <h5>Google Chrome</h5>
+
+                        <p class="ex">
+                            「Google Chrome」の検証ツール（デベロッパーモード）の開き方について説明します。
+                        </p>
+                        <p class="ex"> 
+                            開いているページ上で右クリックをします。（画面内なら場所はどこでも大丈夫です）。
+                            メニューが表示されたら、一番下の「検証」を選択してください。
+                        </p>
+                        <img src="image/dev-2-1.png" alt="Google Chromeの開き方-1">
+
+                        <p class="ex">
+                            Google Chromeの「検証ツール」を開くことができます。
+                        </p>
+                        <img src="image/dev-2-2.png" alt="Google Chromeの開き方-2">
+                    
+                    <div class="border"></div>
+                    <h5>Safari</h5>
+
+                        <p class="ex">
+                            「Safari」の開発ツール（デベロッパーモード）の開き方について説明します。
+                        </p>
+                        <p class="ex">
+                            Safariヘッダーの「開発」メニューを押下して、メニュー内の「Webインスペクタを表示」を選択してください。
+                        </p>
+                        <img src="image/dev-2-3.png" alt="Safariの開き方-1">
+
+                        <p class="ex">
+                            Safariの「開発ツール」を開くことができます。
+                        </p>
+                        <img src="image/dev-2-4.png" alt="Safariの開き方-2">
+                    
+                    <div class="border"></div>
+                        <p class="ex">
+                            ※Safariで「開発」メニューが表示されていない場合
+                        </p>
+                        <p class="ex">
+                            設定メニューを開き、詳細の「Webデベロッパ用の機能を表示」をチェックすると<br>
+                            「開発」メニューを表示させることができます。
+                        </p>
+                        <img src="image/dev-2-5.png" alt="Safariの開き方-3">
+                             
+                </section>
+                
+                <section id="tabs-3">
+                    <h4>devToolの見方</h4>
+
+                        <p class="ex">
+                            devToolの説明をします。
+                        </p>
+                        <img src="image/dev-3-1.png" alt="devToolの説明-3-1">
+
+                        <h5>①デバイスエミュレーターモード</h5>
+
+                            <p class="ex">
+                                スマートフォンやタブレットなどの実機を使うことなく、PCブラウザ上で様々な画面サイズの表示をチェックしながら、HTMLやCSSの調整を行うことができます。<br>
+                                レスポンシブデザインや、モバイル向けのページ制作を行う際に非常に便利です。
+                            </p>
+                            <img src="image/dev-3-1-1.png" alt="devToolの説明-3-1-1">
+                        
+                        <div class="border"></div>
+
+                        <h5>②機能選択</h5>
+
+                            <p class="ex">
+                                devToolの機能を選択・表示するパネルです。ざっくりとした機能を下に記載します。テスト実施時によく使用する機能は「要素（英&#x3A;Elements）」です。
+                            </p>
+                            <img src="image/dev-3-2.png" alt="devToolの説明-3-2">
+
+                            <p class="ex">
+                                <b>要素（英&#x3A;Elements）</b><br>
+                                主にHTMLとCSSの検証に使われるパネルで、新しいデザインを実装する前のテストや、ページ表示に問題がある場合の原因調査などによく利用されます。<br>
+                                「ブラウザ表示中のページ」「HTMLソース」「CSSスタイル」の3つで構成され、HTMLソースはわかりやすいツリー構造、CSSは適用スタイルが優先度順に一覧表示されるなど、簡単にページ検証が行えるような仕組みになっています。
+                            </p>
+
+                            <p class="ex">
+                                <b>コンソール（英&#x3A;Console）</b><br>
+                                ブラウザから出力されたログを確認できる機能。JavaScriptコードを簡易的に実行することも可能です。
+                            </p>
+
+                            <p class="ex">
+                                <b>ソース（英&#x3A;Source）</b><br>
+                                ブラウザが読み込んだhtmlファイルなどのリソースの詳細を確認できる機能。特定の処理やイベント実行時にJavaScriptの実行を一時停止して細かい確認を行うことが可能です。
+                            </p>
+
+                            <p class="ex">
+                                <b>ネットワーク（英&#x3A;Network）</b><br>
+                                ページ内でブラウザが実行した通信のログを確認できる機能。
+                            </p>
+                        
+                        <div class="border"></div>
+
+                        <h5>③devToolの設定</h5>
+                            <p class="ex">
+                                devToolの設定を行うことができます。言語の選択や、devToolの表示位置を設定することができます。
+                            </p>
+                            <img class="md" src="image/dev-3-3.png" alt="devToolの説明-3-3">
+
+                        <div class="border"></div>
+
+                        <h5>④HTMLパネル、⑤CSSパネル</h5>
+
+                            <p class="ex">
+                                表示されているページ内容をHTMLで確認できる画面です。<br>
+                                ページのHTMLやCSSの仮編集を行うことが可能です。仮編集した内容はブラウザ側のページ表示にリアルタイムで反映されます。ただ自分のローカルでのみ反映されるため、検証等でよく使用します。
+                            </p>
+                            <img class="md" src="image/dev-3-4.png" alt="devToolの説明-3-4">
+
+                </section>
+                
+                <section id="tabs-4">
+                    <h4>検証でよく使う項目</h4>
+                        <div class="background-white-box">
+                                <ul class="ex-list">
+                                    <li><a href="#midashi1">&laquo; デバイスモードでレスポンシブ対応の確認</a></li>
+                                    <li><a href="#midashi2">&laquo;	デバイスモードで画面サイズの変更</a></li>
+                                    <li><a href="#midashi3">&laquo; HTMLでリンク先の確認</a></li>
+                                    <li><a href="#midashi4">&laquo;	HTMLでテキストボックスへ入力</a></li>
+                                    <li><a href="#midashi5">&laquo;	CSSスタイルの無効化・追加</a></li>
+                                </ul>
+                        </div>
+                        
+                        <br>
+
+                        <h5 id="midashi1">デバイスモードでレスポンシブ対応の確認</h5>
+
+                            <p class="ex">
+                                デベロッパーツール左上からデバイスエミュレートモードを起動します。エミュレートするデバイスを選ぶことで画面幅や文字列が変更され、選択したデバイスサイズで確認することができます。
+                            </p>
+                            <img src="image/dev-4-1.png" alt="devToolの説明-4-1">
+
+                            <p class="ex">
+                                「iPhone 12 Pro」を選択した場合
+                            </p>
+                            <img class="md" src="image/dev-4-1-1.png" alt="devToolの説明-4-1-1">
+
+                            <p class="ex">
+                                端末回転のアイコンを押すと「iPhone 12 Pro」の画面を横にしたバージョンを確認できます
+                            </p>
+                            <img src="image/dev-4-1-2.png" alt="devToolの説明-4-1-2">
+
+                        <div class="border"></div>
+
+                        <h5 id="midashi2">デバイスモードで画面サイズの変更</h5>
+
+                            <p class="ex">
+                                画面サイズ&#x3A;「レスポンシブ」を選択し、サイズ入力のテキストボックスに「1920」を入力します。<br>
+                                デスクトップのサイズは横&#x3A;1920pxがシェア率1位のため、テスト時にディレクターに確認して必要なサイズで確認しましょう。
+                            </p>
+                            <img src="image/dev-4-2.png" alt="devToolの説明-4-2">
+
+                        <div class="border"></div>
+
+                        <h5 id="midashi3">HTMLでリンク先の確認</h5>
+
+                            <p class="ex">
+                                HTMLの「a href」タグでURLの確認が可能です。リンク先が正しいかどうか等を確認します。<br>
+                                例えば、検証時に期待値と異なる画面に遷移する場合、URLのリンク先が合っているかを確認します。<br>
+                                確認したい要素の場所で検証ツールを開くと、該当のコードが表示されます。「a href="URL"」でURLを確認してみましょう。
+                            </p>
+                            <img src="image/dev-4-3.png" alt="devToolの説明-4-3">
+
+                        <div class="border"></div>
+
+                        <h5 id="midashi4">HTMLでテキストボックスへ入力</h5>
+
+                            <p class="ex">
+                                HTMLのエリアからテキストボックスへ文字を入力することが可能です。<br>
+                                文字数制限でエラーが表示されるかどうか、文字種類でエラーが表示されるかどうか等で確認する際に使用することがあります。<br>
+                                確認したい要素の場所で検証ツールを開くと、該当のコードが表示されます。「value=""」に入力した文字が反映されます。
+                            </p>
+                            
+                            <input type="text" value="文字を入力する">
+
+                            <img src="image/dev-4-4.png" alt="devToolの説明-4-4">
+
+                        <div class="border"></div>
+
+                        <h5 id="midashi5">CSSスタイルの無効化・追加</h5>
+
+                            <p class="ex">
+                                CSSのスタイルを無効化・追加することが可能です。CSSスタイルが正しいものが当てられているかを確認する際に使用することがあります。<br>
+                                「真ん中で表示されるはずのテキストが左寄りで表示されている」や「画像が小さい」などのレイアウト崩れや表示検証の際にCSSスタイルが影響しているかどうかを判別するために確認します。<br>
+                                確認したい要素の場所で検証ツールを開くと、該当のコードが表示されます。CSSエリアで該当スタイルのチェックボックスのON・OFFを実施してみましょう。
+                            </p>
+                            <img src="image/dev-4-5.png" alt="devToolの説明-4-5">
+
+                </section>
+
+                <section id="tabs-6">
+                    <h4>コンソールを使う</h4>
+
+                    <p class="ex">
+                        コンソールとはブラウザから出力されたログを確認できる画面です。<br>
+                        またJavaScriptコードを簡易的に実行することもできます。簡単なコードを入力し実行することでテスト検証で使用することもできるので、知っておくと便利です。
+                    </p>
+                    <img src="image/dev-5-1.png" alt="devToolの説明-5-1">
+                    
+                    <div class="background-white-box">
+                        <ul class="ex-list">
+                            <li><a href="#midashi6">&laquo; 直接画面に文字を入力する</a></li>
+                            <li><a href="#midashi7">&laquo;	Windowの横幅サイズを取得する</a></li>
+                            <li><a href="#midashi8">&laquo; 動的にWindowの横幅サイズを取得する</a></li>
+                            <li><a href="#midashi9">&laquo; Chromeのバージョン情報を取得する</a></li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <h5 id="midashi6">直接画面に文字を入力する</h5>
+
+                        <p class="codo">
+                            document.designMode = "on" 
+                        </p>
+                        <p class="ex">
+                            コードをコピーして、コンソールに貼り付けてEnterを押してください。<br>
+                            サイトページの文言をクリックするだけで文言を編集することができます。<br>
+                            画面設計書のスクリーンショットの差し替え時や、文言を検討する際に使用できると思います。
+                        </p>
+                        <img src="image/dev-5-2.png" alt="devToolの説明-5-2">
+                        <p class="codo">
+                            document.designMode = "off" 
+                        </p>
+                        <p class="ex">
+                            解除するには上記コードを入力するか、リロードしてください。
+                        </p>
+                    
+                    <div class="border"></div>
+                    
+                    <h5 id="midashi7">Windowの横幅サイズを取得する</h5>
+
+                        <p class="codo">
+                            let windowWidth = window.innerWidth;<br>
+                            alert("現在のウィンドウの幅は " + windowWidth + "px です。");
+                        </p>
+                        <p class="ex">
+                            コードをコピーして、コンソールに貼り付けてEnterを押してください。<br>
+                            「現在開いているWindowのサイズを取得して、ダイアログで表示する」コードになります。<br>
+                            テスト検証で画面幅を確認してbacklog等に起票する際に使用できると思います。
+                        </p>
+                        <img src="image/dev-5-3.png" alt="devToolの説明-5-3">
+                        <p class="ex">
+                            「Width」の箇所を「Height」に変えると、高さを見ることができます。
+                        </p>
+
+                    <h5 id="midashi8">動的にWindowの横幅サイズを取得する</h5>
+
+                        <p class="ex">
+                            コードをコピーして、コンソールに貼り付けてEnterを押してください。<br>
+                            Windowを縮めたり、広げたりすることで動的にWindowの横幅をコンソールに表示することができます。<br>
+                        </p>
+                        <p class="codo">
+                            window.onresize = function(){console.log( window.innerWidth );}
+                        </p>
+                        <img src="image/dev-5-4.png" alt="devToolの説明-5-4">
+                    
+                    <h5 id="midashi9">Chromeのバージョン情報を取得する</h5>
+
+                        <p class="ex">
+                            コードをコピーして、コンソールに貼り付けてEnterを押してください。<br>
+                            Chromeのバージョン情報を確認することができます。Chromeの設定から確認も可能ですが、コーンソールを使用して確認することも可能です。
+                        </p>
+                        <p class="codo">
+                            console.log(navigator.userAgent);
+                        </p>
+                        <img src="image/dev-5-5.png" alt="devToolの説明-5-4">
+                
+                </section>
+
+            </section>
+        </div>
+
+        <!--footer-->
+        <footer>
+            <p>©2024 Rio. All Rights Reserved.test</p>
+        </footer>
+
+        <!--js-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/main.js"></script>    
+    </body>
+</html>
