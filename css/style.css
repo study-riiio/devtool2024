@@ -1,0 +1,184 @@
+@charset "utf-8";
+/*共通*/
+body {
+ font-family: "Zen Kaku Gothic New", sans-serif;
+ font-size: 22px;
+ margin: 0;
+ display: flex;
+ flex-flow: column;
+ min-height: 100vh;
+ background-color: #F1F1F1;
+}
+
+/*header*/
+header {
+  position: sticky; /*親要素に合わせてheaderを固定 */
+  top:  0; /*親要素のtop位置に*/
+  width:  100%;
+  padding:  16px 16px;
+  text-align: left;
+  background-color: #fcfcfc;
+  color: #9f1d9cad;
+  font-size:  24px;
+  font-weight:  700;
+  border-bottom: 2px solid #dedddd;
+}
+
+/*tabs menu*/
+.tabs { /*タブとコンテンツを2カラム*/
+  display: flex;
+}
+
+ul.tabs-menu {
+  width: 20%;
+  min-height: 100vh;
+  background-color: #fcfcfc;
+  list-style: none;
+  position: fixed;
+  overflow: auto;
+}
+
+.tabs-menu li {
+  padding: 12px 0px 12px 20px;
+  border: 0.5px solid #dedddd;
+}
+
+.tabs-menu li:not(.active):hover { /*非選択のタブにマウスカーソルを乗せたら色を変える*/
+  border-color: #f0f0f0 #f0f0f0 #9f1d9d6c;
+  background-color: #f0f0f0;
+}
+
+.tabs-menu .active { /*選択中のタブの色を設定*/
+  background-color: #9f1d9d6c;
+}
+
+.tabs-menu li a{
+  display: block;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/*tabs content*/
+.tabs-content section { /* 各タブのコンテンツはデフォルトで非表示 */
+  display: none;
+}
+
+.tabs-content {
+  min-height: 100vh;
+  margin-left: 20%;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.tabs-content h4 {
+  padding: 12px 0px;
+  font-size: 20px;
+  color: #9f1d9cad;
+  border-bottom: 1px solid #9f1d9d6c;
+}
+
+.tabs-content h5 {
+  display: inline;
+  background: linear-gradient(transparent 60%, #c565c46c 50%);
+  font-size: 0.8em;
+  color: #050505ad;
+}
+
+.ex {
+  padding: 12px 0px;
+  font-size: 0.8em;
+  color: #050505ad;
+}
+
+ul.ex-list {
+  padding: 12px 0px;
+  font-size: 0.8em;
+  color: #050505ad;
+  list-style: none;
+}
+
+.ex-list li {
+  padding-left: 1em;
+}
+
+.ex-list a {
+  color: #050505ad;
+  text-decoration: none;
+}
+
+.ex-list a:hover {
+  color: #9f1d9cad;
+  text-decoration: underline;
+}
+
+.codo {
+  margin: 12px 0px;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: 1px solid #050505ad;
+  background-color: #ededed;
+  font-size: 0.8em;
+}
+
+/*img*/
+img.md {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-bottom: 40px;
+  border: 1px solid #050505ad;
+}
+
+img {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-bottom: 40px;
+  border: 1px solid #050505ad;
+}
+
+/*box*/
+.background-white-box {
+  margin-top: 1em;
+  padding:  16px 16px;
+  background-color: #ffffff;
+}
+
+/*border*/
+.border {
+  border-bottom: 1px solid #9f1d9d6c;
+}
+
+/*input*/
+input {
+  background-color: #fcfcfc;
+  border: 1px solid #050505ad;
+  border-radius: 5px;
+  padding-left: 5px;
+  font-size: 22px;
+  margin-bottom: 2em;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  height: 24px;
+  text-align: center;
+  background-color: #fcfcfc;
+  color: #9f1d9cad;
+  font-size: 16px;
+  font-weight: 400;  
+}
+
+/*link*/
+h5::before {
+  content:'';
+  display: block;
+  padding-top: 120px;
+  margin-top: -120px;
+}
+
+
