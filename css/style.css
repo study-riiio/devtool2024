@@ -91,6 +91,12 @@ ul.tabs-menu {
   color: #050505ad;
 }
 
+.ex-er {
+  padding: 12px 0px;
+  font-size: 0.8em;
+  color: #cb0808ad;
+}
+
 ul.ex-list {
   padding: 12px 0px;
   font-size: 0.8em;
@@ -162,6 +168,25 @@ input {
   margin-bottom: 2em;
 }
 
+/*page_top*/
+#page_top {
+  width: 40px;
+	height: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: #fcfcfc;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+#page_top a {
+  color: #9f1d9d6c;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 /*footer*/
 footer {
   width: 100%;
@@ -180,5 +205,3 @@ h5::before {
   padding-top: 120px;
   margin-top: -120px;
 }
-
-
