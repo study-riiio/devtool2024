@@ -270,6 +270,7 @@
                             <li><a href="#midashi7">&laquo;	Windowの横幅サイズを取得する</a></li>
                             <li><a href="#midashi8">&laquo; 動的にWindowの横幅サイズを取得する</a></li>
                             <li><a href="#midashi9">&laquo; Chromeのバージョン情報を取得する</a></li>
+                            <li><a href="#midashi10">&laquo; 好きなダイアログを表示させる</a></li>
                         </ul>
                     </div>
 
@@ -286,13 +287,22 @@
                             画面設計書のスクリーンショットの差し替え時や、文言を検討する際に使用できると思います。
                         </p>
                         <img src="image/dev-5-2.png" alt="devToolの説明-5-2">
+                        <p class="ex">
+                            解除するにはリロードしてください。
+                        </p>
+                        <p class="ex-er">
+                            ※document.designMode = "on"を入力してwarningエラーが表示される場合
+                        </p>
                         <p class="codo">
-                            document.designMode = "off" 
+                            allow pasting 
+                        </p>
+                        <p class="codo">
+                            delete navigator.clipboard; 
                         </p>
                         <p class="ex">
-                            解除するには上記コードを入力するか、リロードしてください。
+                            上記のコードを入力してコピー＆ペーストを許可してください。
                         </p>
-                    
+                        <br>
                     <div class="border"></div>
                     
                     <h5 id="midashi7">Windowの横幅サイズを取得する</h5>
@@ -332,10 +342,38 @@
                             console.log(navigator.userAgent);
                         </p>
                         <img src="image/dev-5-5.png" alt="devToolの説明-5-4">
+
+                    <div class="border"></div>
+                    <h5 id="midashi10">好きなダイアログを表示させる</h5>
+                        <p class="ex">
+                            コンソールを使用すると自分でダイアログを表示させることも可能です。
+                            とても簡単なコードを入力するだけで、お好きな文字でダイアログを表示させることができるので、ダイアログの提案時に使用することができます。
+                        </p>
+                        <p class="ex">
+                            ダイアログのボタンがOKのみ↓
+                        </p>
+                        <p class="codo">
+                            alert("テスト"); 
+                        </p>
+                        <img src="image/dev-5-6.png" alt="devToolの説明-5-6">
+
+                        <p class="ex">
+                            ダイアログのボタンにキャンセルとOKがあり↓
+                        </p>
+                        <p class="codo">
+                            confirm("本当に削除しますか？");  
+                        </p>
+                        <img src="image/dev-5-6-1.png" alt="devToolの説明-5-6-1">
+
                 
                 </section>
 
             </section>
+        </div>
+
+        <!-- TOPへ戻る -->
+        <div id="page_top">
+            <a href="#">↑</a>
         </div>
 
         <!--footer-->
