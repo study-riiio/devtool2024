@@ -18,6 +18,9 @@ const showTab = (selector) => {
 
   //.tabs-content > sectionのうち、selectorに該当するものだけを表示する
   $(selector).show();
+
+  // ページをトップにスクロールする
+  window.scrollTo(0, 0);
 };
 
 //タブがクリックされたらコンテンツを表示
